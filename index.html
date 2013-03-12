@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title>radiobox</title>
+  <link rel="stylesheet" href="reset.css" />
+  <style type="text/css">
+    div {
+      width: 40px;
+      height: 40px;
+      margin: 10px;
+      float: left;
+    }
+
+    label {
+      position: relative;
+    }
+
+    img {
+      position: absolute;
+      z-index: 9999;
+      /*cursor: pointer;*/
+    }
+
+    input[type=radio] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <label><img src="img.jpg" alt="img" width="40" height="40" /><input type="radio" name="test" value="" /></label>
+</div>
+<div>
+  <label><img src="img.jpg" alt="img" width="40" height="40" /><input type="radio" name="test" value="" /></label>
+</div>
+<div>
+  <label><img src="img.jpg" alt="img" width="40" height="40" /><input type="radio" name="test" value="" /></label>
+</div>
+<script type="text/javascript">
+  var m = document.getElementsByTagName("img");
+  for (var i = 0; i < m; i++) {
+    console.log(i);
+    m.onclick = function () {
+      console.log("test");
+    };
+  }
+</script>
+</body>
+</html>
